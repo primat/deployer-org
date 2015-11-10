@@ -1,0 +1,15 @@
+#!/usr/bin/expect
+
+set timeout -1
+
+set params_string [lindex $argv 0]
+set pass [lindex $argv 1]
+
+eval spawn $params_string
+
+expect {
+    "assword*" {send "$pass\r"}
+    eof {exit}
+}
+
+interact

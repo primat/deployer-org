@@ -1,0 +1,14 @@
+{
+	"require": {
+        "pimple/pimple": "3.0.*@dev",
+        "phpmailer/phpmailer": "dev-master",
+        "phpseclib/phpseclib": "0.3.*@dev",
+        "phpunit/phpunit": "4.2.*@dev"
+    },
+	"autoload": {
+        "psr-4": {
+            "Cogeco\\": [ "source/php/libs/Cogeco", "dev/phpunit/Cogeco" ],
+            "Primat\\": [ "source/php/libs/Primat", "dev/phpunit/Primat" ]
+		}
+    }
+}
